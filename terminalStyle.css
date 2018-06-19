@@ -1,0 +1,25 @@
+html{
+	background-color: black;
+}
+body{
+	background-color: #15442b;
+	color:#5befa0;
+	font-family: 'Lekton';font-size: 20px;
+	text-transform: uppercase;
+}
+.pickword-wrapper>p{
+	width: 150px;
+}
+.mainScreen{
+	width: 700px;
+	height: 700px;
+	margin: auto;
+}
+.pickword-wrapper>p:hover{
+	background-color: #5befa0;
+	color:#15442b;
+}
+
+.terminalLocked,.accessGranted,.show-attempts-left{
+	font-weight: bold;
+}
