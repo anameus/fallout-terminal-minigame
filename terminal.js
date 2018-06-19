@@ -1,25 +1,25 @@
-var selectionOfWords = ["acacias","academy","adapted","adamant","affiant",
+let selectionOfWords = ["acacias","academy","adapted","adamant","affiant",
 						"airport","airmail","alleged","allegro","algebra",
 						"balloon","balcony","barbell","bargain","barkeep",
 						"bassist","battery","bazooka","bearded","because"]
 
-var availableWords = [] 
-var theWord = ""
-var guessedWords = []
-var attemptsLeft = 3
+let availableWords = [] 
+let theWord = ""
+let guessedWords = []
+let attemptsLeft = 3
 
 function populateWords() { 
 	for(k = 0; k < selectionOfWords.length-10; k++){
-		var randomIndex = Math.floor(Math.random()*(selectionOfWords.length))		
+		let randomIndex = Math.floor(Math.random()*(selectionOfWords.length))		
 		$('.pickword-wrapper').append("<p>"+selectionOfWords[randomIndex]+"</p>")
-		var newAvailibleWord = selectionOfWords[randomIndex];
+		let newAvailibleWord = selectionOfWords[randomIndex];
 		availableWords.push(newAvailibleWord)
 		selectionOfWords.splice(randomIndex, 1)
 	}
 }
 
 function chooseTheWord(){
-	var indexOfWord = Math.floor(Math.random()*(availableWords.length))
+	let indexOfWord = Math.floor(Math.random()*(availableWords.length))
 	theWord = availableWords[indexOfWord]
 	console.log(theWord)
 }
@@ -29,11 +29,10 @@ function main(){
 	$(".terminalLocked").hide()
 	$(".accessGranted").hide()
 
-	
 	$('.pickword-wrapper').on('click','p',function(){
 		attemptsLeft--
 		guessedWords.push(this.innerHTML)
-		var numberOfBulls = 0 //reference to the Bull and Cow word game
+		let numberOfBulls = 0 //reference to the Bull and Cow word game
 		for(i = 0; i < theWord.length; i++){
 			if (this.innerHTML[i] === theWord[i]){
 				numberOfBulls = numberOfBulls + 1
@@ -48,7 +47,6 @@ function main(){
 		$('.show-attempts-left').text("Attempt(s) left: " + attemptsLeft)
 		
 			if((this.innerHTML) === theWord && attemptsLeft > 0){
-				console.log("Yes dit werk!")
 				$('.pickword-wrapper').hide();
 				$('.accessGranted').show();
 
