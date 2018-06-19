@@ -13,7 +13,6 @@ The goal of the project is so I can learn JavaScript/get better at coding.
 * version 1.0 - initial commit of old code. Game is functional using a small amount of words.
 
 ### Future updates: 
-* make code more modern
 * import huge list of common 7 letter words
 * typing animation for selected word hover
 * typing sound for selected word hover
