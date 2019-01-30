@@ -11,7 +11,7 @@ let guessedWords = []
 let attemptsLeft = 3
 
 function populateWords() { 
-	for(k = 0; k < selectionOfWords.length-10; k++){
+	for(k = 0; k < 5; k++){
 		let randomIndex = Math.floor(Math.random()*(selectionOfWords.length))		
 		$('.pickword-wrapper').append("<p>"+selectionOfWords[randomIndex]+"</p>")
 		let newAvailibleWord = selectionOfWords[randomIndex];
