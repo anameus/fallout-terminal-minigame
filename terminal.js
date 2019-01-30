@@ -1,7 +1,9 @@
 let selectionOfWords = ["acacias","academy","adapted","adamant","affiant",
 						"airport","airmail","alleged","allegro","algebra",
 						"balloon","balcony","barbell","bargain","barkeep",
-						"bassist","battery","bazooka","bearded","because"]
+						"bassist","battery","bazooka","bearded","because",
+						"careers","cartoon","chopper","Circuit","Combust",
+						"Compare","Compose","Cutlery","Cyclone","Cynical"]
 
 let availableWords = [] 
 let theWord = ""
